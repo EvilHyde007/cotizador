@@ -9,7 +9,7 @@ export function calcularMarca (marca) {
     let incremento;
 
     switch(marca ){
-        case 'europe':
+        case 'europeo':
             incremento= 1.30;
                 break;
         case 'americano':
@@ -30,4 +30,9 @@ export function calcularMarca (marca) {
 
 export function obtenerPlan (plan) {
     return (plan === 'basico') ? 1.20 : 1.50;
+}
+
+//Muestra la primer letra Mayuscula
+export function primerMayuscula (texto){
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
 }

@@ -1,5 +1,7 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import styled from '@emotion/styled';
+import {primerMayuscula} from '../Helper';
+import PropTypes from 'prop-types';
 
 const ContenedorResumen = styled.div `
     padding: 1rem;
@@ -25,12 +27,16 @@ const Resumen = ({datos}) => {
         <ContenedorResumen>
             <h2>Resumen De Cotizacion</h2>
             <ul>
-                <li> Marca: { marca} </li>
-                <li> Plan: { plan}</li>
-                <li> Año del auto: { year}</li>
+                <li> Marca: { primerMayuscula (marca)} </li>
+                <li> Plan: { primerMayuscula (plan)}</li>
+                <li> Año del auto: { year }</li>
             </ul>
         </ContenedorResumen>
      );
 }
  
+Resumen.propTypes = {
+    datos: PropTypes.object.isRequired
+}
+
 export default Resumen;
